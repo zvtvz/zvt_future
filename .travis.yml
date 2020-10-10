@@ -1,0 +1,19 @@
+language: python
+cache: pip
+python:
+- '3.6'
+install:
+- pip install -r requirements.txt
+script:
+- pytest
+deploy:
+  provider: pypi
+  user: __token__
+  password:
+    secure: v+9B3bTmRHB6TaQoTyjaTd/2Z6Z1Bbi9c7xPeorXf/MKybEzpbbX3bkj3nwqI3TKQYt0tvTFwQE8h789Hstce4jB1KpNO83/52Ag+lOh9w5WiLaLN1hlt/oDCOIm+ynUX1ytMM1y3UkOcZIW1lqKeyT8O6x8q1gbJwnr4FzEoX9zMEBFjelbmhAuBe//nLR2vUCwj7qe2hjYJjDu3T6NIrZ188/NIqBziZvFw3Qlp7pJSohi+DCCec7ncvkpeZ3SdUlWSqgV1rn5+++J3Q+IYFy86c8jYEw2LGO0lr23Kh1RvYI9QSkcUnRO0JK7I19YMSvgKEuMF6VT5HT3n7r484ugtq4y/HES5nKcdprWt2W6nZ0x9JW6VNIHC5CVXcVAhZxf9fPgN+hoDrKfBboEOcJvuk5emzkboWqUIhzbyWCCFLlak0fyLtRdAZn2g3KU7E0OeKQTJYi+GQPGNDi9cW4IELGWeL/tPLL+NHpHMX7xe9eP+RdxAgH9i7hHPTjLOYrSkCeaTo3I954LdFjcnpUGnF2xZrxcLgvLoWALovJgUzkLE4f7JG6ksx3xObyJKfJ3iyiYfZHIbVZnB2+E1U6NE5SqlCZ5+UfGMOM4T3qez/hUmu0rmMOZCzd13Io895+KpIxTG+IBtVU2b+YsjmDSiI54Lk5mXM9TWdOtGQI=
+  on:
+    tags: true
+notifications:
+  email:
+    recipients:
+    - 5533061@qq.com
