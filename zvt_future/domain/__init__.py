@@ -1,16 +1,12 @@
 # -*- coding: utf-8 -*-
-from sqlalchemy import Column, Float
+# the __all__ is generated
+__all__ = []
 
-from zvt.domain import KdataCommon
+# __init__.py structure:
+# common code of the package
+# export interface in __all__ which contains __all__ of its sub modules
 
-
-# 期货K线
-class FutureKdataCommon(KdataCommon):
-    # 持仓量
-    interest = Column(Float)
-    # 结算价
-    settlement = Column(Float)
-    # 涨跌幅(按收盘价)
-    change_pct = Column(Float)
-    # 涨跌幅(按结算价)
-    change_pct1 = Column(Float)
+# import all from submodule quotes
+from .quotes import *
+from .quotes import __all__ as _quotes_all
+__all__ += _quotes_all
