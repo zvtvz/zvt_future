@@ -4,7 +4,7 @@ from zvt.contract import IntervalLevel
 from zvt.generator import *
 
 if __name__ == '__main__':
-    gen_kdata_schema(pkg='zvt_future', providers=['joinquant'], entity_type='future',
+    gen_kdata_schema(pkg='zvt_future', providers=['exchange', 'joinquant'], entity_type='future',
                      levels=[IntervalLevel.LEVEL_1DAY])
 
     gen_exports('./domain')

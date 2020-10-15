@@ -1,4 +1,30 @@
 # -*- coding: utf-8 -*-
+CHINA_FUTURE_CODE_MAP_NAME = {'cu': '铜',
+                              'al': '铝',
+                              'zn': '锌',
+                              'pb': '铅',
+                              'ni': '镍',
+                              'sn': '锡',
+                              'au': '黄金',
+                              'ag': '白银',
+                              'rb': '螺纹钢',
+                              'wr': '线材',
+                              'ss': '不锈钢',
+                              'hc': '热轧卷板',
+                              'sc': '原油',
+                              'fu': '燃料油',
+                              'lu': '低硫燃料油',
+                              'bu': '石油沥青',
+                              'ru': '天然橡胶',
+                              'nr': '20号胶',
+                              'sp': '纸浆'}
+
+
+def get_future_name(code):
+    simple_code = code[:-4]
+    return "{}{}".format(CHINA_FUTURE_CODE_MAP_NAME[simple_code], code[-4:])
+
+
 # the __all__ is generated
 __all__ = []
 
@@ -9,14 +35,5 @@ __all__ = []
 # import all from submodule recorders
 from .recorders import *
 from .recorders import __all__ as _recorders_all
+
 __all__ += _recorders_all
-
-# import all from submodule generator
-from .generator import *
-from .generator import __all__ as _generator_all
-__all__ += _generator_all
-
-# import all from submodule domain
-from .domain import *
-from .domain import __all__ as _domain_all
-__all__ += _domain_all
