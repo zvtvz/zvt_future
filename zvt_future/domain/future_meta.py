@@ -18,7 +18,7 @@ class Future(EntityMixin, FutureMetaBase):
     is_continute = Column(Boolean)
 
 
-register_schema(providers=['exchange'], db_name='future_meta', schema_base=FutureMetaBase)
+register_schema(providers=['exchange', 'joinquant'], db_name='future_meta', schema_base=FutureMetaBase)
 
 # the __all__ is generated
 __all__ = ['Future']
