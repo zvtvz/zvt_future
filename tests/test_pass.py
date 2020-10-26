@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
-from .context import init_test_context
-
-init_test_context()
-
 
 def test_pass():
     pass
+# the __all__ is generated
+__all__ = ['test_pass']

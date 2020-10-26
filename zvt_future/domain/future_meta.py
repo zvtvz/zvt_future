@@ -14,11 +14,9 @@ class Future(EntityMixin, FutureMetaBase):
     list_date = Column(DateTime)
     # 退市日
     end_date = Column(DateTime)
-    # 主力连续
-    is_continute = Column(Boolean)
 
 
-register_schema(providers=['exchange', 'joinquant'], db_name='future_meta', schema_base=FutureMetaBase)
+register_schema(providers=['joinquant'], db_name='future_meta', schema_base=FutureMetaBase)
 
 # the __all__ is generated
 __all__ = ['Future']

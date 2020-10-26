@@ -84,6 +84,7 @@ celerybeat-schedule
 # virtualenv
 venv/
 ENV/
+/ve/
 
 # Spyder project settings
 .spyderproject
@@ -91,12 +92,14 @@ ENV/
 # Rope project settings
 .ropeproject
 
-/ve/
+/zvt-home
+/zvt-test-home
+*.tar.gz
+
 .pytest_cache/
+
 # LibreOffice locks
 .~lock.*#
-
-zvt
 
 node_modules/
 

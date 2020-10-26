@@ -4,7 +4,7 @@ from sqlalchemy import Column, Float
 from zvt.domain import KdataCommon
 
 
-# 期货K线
+# future common kdata
 class FutureKdataCommon(KdataCommon):
     # 持仓量
     interest = Column(Float)

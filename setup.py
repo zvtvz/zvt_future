@@ -32,8 +32,8 @@ except:
 
 setup(
     name='zvt_future',
-    version='0.0.1',
-    description='zvt future plugin ',
+    version='0.9.0',
+    description='unified,modular quant framework for human beings ',
     long_description=long_description,
     url='https://github.com/zvtvz/zvt_future',
     author='foolcage',
@@ -50,21 +50,16 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7'
     ],
-
     keywords='quant stock finance fintech big-data zvt technical-analysis trading-platform pandas fundamental-analysis',
-    packages=find_packages(exclude=['examples', 'contrib', 'docs', 'tests', 've']),  # Required
-    package_data={
-        'zvt_future': ['*.json'],
-    },
-
+    packages=find_packages(include=['zvt_future.*', 'zvt_future']),
+    python_requires='>=3.5, <4',
+    include_package_data=True,
     install_requires=requirements,
-    project_urls={  # Optional
+    project_urls={
         'Bug Reports': 'https://github.com/zvtvz/zvt_future/issues',
         'Funding': 'https://github.com/zvtvz/zvt_future',
         'Say Thanks!': 'https://saythanks.io/to/foolcage',
         'Source': 'https://github.com/zvtvz/zvt_future',
     },
-
-    include_package_data=True,
-    long_description_content_type="text/markdown",
+    long_description_content_type="text/markdown"
 )
