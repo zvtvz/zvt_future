@@ -32,7 +32,7 @@ except:
 
 setup(
     name='zvt_future',
-    version='0.9.0',
+    version='0.0.1',
     description='unified,modular quant framework for human beings ',
     long_description=long_description,
     url='https://github.com/zvtvz/zvt_future',

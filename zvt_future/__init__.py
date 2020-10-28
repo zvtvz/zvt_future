@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
+import functools
+
+from zvt import init_config
+
 CHINA_FUTURE_CODE_MAP_NAME = {'cu': '铜',
                               'al': '铝',
                               'zn': '锌',
@@ -25,15 +29,11 @@ def get_future_name(code):
     return "{}{}".format(CHINA_FUTURE_CODE_MAP_NAME[simple_code], code[-4:])
 
 
+zvt_future_config = {}
+
+int_zvt_future_config = functools.partial(init_config, pkg_name='zvt_future', current_config=zvt_future_config)
+
+int_zvt_future_config()
+
 # the __all__ is generated
-__all__ = []
-
-# __init__.py structure:
-# common code of the package
-# export interface in __all__ which contains __all__ of its sub modules
-
-# import all from submodule recorders
-from .recorders import *
-from .recorders import __all__ as _recorders_all
-
-__all__ += _recorders_all
+__all__ = ['get_future_name', 'int_zvt_future_config']

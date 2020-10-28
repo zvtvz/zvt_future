@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from sqlalchemy import Column, DateTime, Boolean
+from sqlalchemy import Column, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 
 from zvt.contract import EntityMixin
@@ -16,7 +16,7 @@ class Future(EntityMixin, FutureMetaBase):
     end_date = Column(DateTime)
 
 
-register_schema(providers=['joinquant'], db_name='future_meta', schema_base=FutureMetaBase)
+register_schema(providers=['joinquant', 'exchange'], db_name='future_meta', schema_base=FutureMetaBase)
 
 # the __all__ is generated
 __all__ = ['Future']

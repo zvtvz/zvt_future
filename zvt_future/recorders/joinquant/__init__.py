@@ -1,4 +1,5 @@
-# -*- coding: utf-8 -*-# the __all__ is generated
+# -*- coding: utf-8 -*-#
+# the __all__ is generated
 __all__ = []
 
 # __init__.py structure:
